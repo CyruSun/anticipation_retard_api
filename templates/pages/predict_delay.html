@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prédiction du retard de vol </title>
+    	<meta charset="utf-8" />
+    <!-- <body background="home-alone.jpg"> -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <!-- <body background="home-alone.jpg"> -->
+	<body>
+        <h1>Retard prédit</h1>
+		<p>
+			<big>
+				Retard prédit au départ de {{ heure }} heure de {{ orgn }} à destination de {{ dstntn }} pour la compagnie {{ compagnie }} le {{ nom_jour }} {{ d_mnth }} {{ nom_mois }} 2016 :<br>
+				{{ rtrd_prdt }} min".
+			</big>
+		</p>
+		<p>
+			<a href="/">
+				<mark>
+					<em>home
+					</em>
+				</mark>
+			</a>
+		</p>
+		<p>
+			<a href="/send">
+				<mark>
+					<em>API</em>
+				</mark>
+			</a>
+		</p>
+    </body>
+</html>

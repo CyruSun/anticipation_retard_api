@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index anticipation de retard de vols</title>
+    	<meta charset="utf-8" />
+    <!-- <body background="home-alone.jpg"> -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+	<body>
+        <h1>Anticipation de retard de vols</h1>
+        <p>
+        	<big>
+        		<br />Entrer les paramètres du vol:
+        	</big>
+    	</p>
+        <form method="POST" action="/send">
+					<big>
+						Aéroport de départ:
+					</big>
+					<br />
+        			<input list="airport_departure" type="text" name="orgn">
+					<datalist id="airport_departure">
+					  <option value="ABE">
+					  <option value="ABQ">
+					  <option value="ACT">
+					  <option value="ACY">
+					  <option value="AEX">
+					  <option value="AGS">
+					  <option value="ALB">
+					  <option value="AMA">
+					  <option value="ANC">
+					  <option value="APN">
+					  <option value="ASE">
+					  <option value="ATL">
+					  <option value="ATW">
+					  <option value="AUS">
+					  <option value="AVL">
+					  <option value="AVP">
+					  <option value="AZO">
+					  <option value="BDL">
+					  <option value="BFL">
+					  <option value="BGM">
+					  <option value="BHM">
+					  <option value="BIS">
+					  <option value="BJI">
+					  <option value="BMI">
+					  <option value="BNA">
+					  <option value="BOI">
+					  <option value="BOS">
+					  <option value="BQK">
+					  <option value="BQN">
+					  <option value="BTR">
+					  <option value="BTV">
+					  <option value="BUF">
+					  <option value="BUR">
+					  <option value="BWI">
+					  <option value="BZN">
+					  <option value="CAE">
+					  <option value="CAK">
+					  <option value="CDC">
+					  <option value="CHA">
+					  <option value="CHO">
+					  <option value="CHS">
+					  <option value="CID">
+					  <option value="CLE">
+					  <option value="CLL">
+					  <option value="CLT">
+					  <option value="CMH">
+					  <option value="COS">
+					  <option value="CPR">
+					  <option value="CRP">
+					  <option value="CRW">
+					  <option value="CVG">
+					  <option value="DAB">
+					  <option value="DAL">
+					  <option value="DAY">
+					  <option value="DCA">
+					  <option value="DEN">
+					  <option value="DFW">
+					  <option value="DHN">
+					  <option value="DLH">
+					  <option value="DRO">
+					  <option value="DSM">
+					  <option value="DTW">
+					  <option value="EAU">
+					  <option value="ECP">
+					  <option value="EGE">
+					  <option value="EKO">
+					  <option value="ELM">
+					  <option value="ELP">
+					  <option value="ERI">
+					  <option value="EVV">
+					  <option value="EWN">
+					  <option value="EWR">
+					  <option value="EYW">
+					  <option value="FAI">
+					  <option value="FAR">
+					  <option value="FAT">
+					  <option value="FAY">
+					  <option value="FCA">
+					  <option value="FLG">
+					  <option value="FLL">
+					  <option value="FNT">
+					  <option value="FSD">
+					  <option value="FSM">
+					  <option value="FWA">
+					  <option value="GCC">
+					  <option value="GEG">
+					  <option value="GFK">
+					  <option value="GJT">
+					  <option value="GNV">
+					  <option value="GPT">
+					  <option value="GRB">
+					  <option value="GRR">
+					  <option value="GSO">
+					  <option value="GSP">
+					  <option value="GTF">
+					  <option value="GTR">
+					  <option value="GUM">
+					  <option value="HDN">
+					  <option value="HIB">
+					  <option value="HNL">
+					  <option value="HOU">
+					  <option value="HPN">
+					  <option value="HRL">
+					  <option value="HSV">
+					  <option value="HYA">
+					  <option value="IAD">
+					  <option value="IAH">
+					  <option value="ICT">
+					  <option value="IDA">
+					  <option value="ILM">
+					  <option value="IND">
+					  <option value="ISN">
+					  <option value="ISP">
+					  <option value="ITH">
+					  <option value="ITO">
+					  <option value="JAC">
+					  <option value="JAN">
+					  <option value="JAX">
+					  <option value="LBB">
+					  <option value="LBE">
+					  <option value="LCH">
+					  <option value="LEX">
+					  <option value="LFT">
+					  <option value="LGA">
+					  <option value="LGB">
+					  <option value="LIH">
+					  <option value="LIT">
+					  <option value="LNK">
+					  <option value="LRD">
+					  <option value="LSE">
+					  <option value="LWS">
+					  <option value="MAF">
+					  <option value="MBS">
+					  <option value="MCI">
+					  <option value="MCO">
+					  <option value="MDT">
+					  <option value="MDW">
+					  <option value="MEI">
+					  <option value="MEM">
+					  <option value="MFE">
+					  <option value="MFR">
+					  <option value="MGM">
+					  <option value="MHT">
+					  <option value="MIA">
+					  <option value="MKE">
+					  <option value="MKG">
+					  <option value="MLB">
+					  <option value="MLI">
+					  <option value="MLU">
+					  <option value="MOB">
+					  <option value="MQT">
+					  <option value="MRY">
+					  <option value="MSN">
+					  <option value="MSO">
+					  <option value="MSP">
+					  <option value="MSY">
+					  <option value="MYR">
+					  <option value="OAK">
+					  <option value="OGG">
+					  <option value="OKC">
+					  <option value="OMA">
+					  <option value="ONT">
+					  <option value="ORD">
+					  <option value="ORF">
+					  <option value="ORH">
+					  <option value="OTZ">
+					  <option value="PBI">
+					  <option value="PDX">
+					  <option value="PHF">
+					  <option value="PHL">
+					  <option value="PHX">
+					  <option value="PIA">
+					  <option value="PIH">
+					  <option value="PIT">
+					  <option value="PNS">
+					  <option value="PSC">
+					  <option value="PSE">
+					  <option value="PSP">
+					  <option value="PVD">
+					  <option value="PWM">
+					  <option value="RAP">
+					  <option value="RDU">
+					  <option value="RIC">
+					  <option value="RKS">
+					  <option value="RNO">
+					  <option value="ROA">
+					  <option value="ROC">
+					  <option value="RST">
+					  <option value="RSW">
+					  <option value="SAF">
+					  <option value="SAN">
+					  <option value="SAT">
+					  <option value="SAV">
+					  <option value="SBA">
+					  <option value="SBN">
+					  <option value="SBP">
+					  <option value="SDF">
+					  <option value="SEA">
+					  <option value="SFO">
+					  <option value="SGF">
+					  <option value="SGU">
+					  <option value="SHV">
+					  <option value="SJC">
+					  <option value="SJU">
+					  <option value="SLC">
+					  <option value="SMF">
+					  <option value="SNA">
+					  <option value="SPI">
+					  <option value="SRQ">
+					  <option value="STL">
+					  <option value="STT">
+					  <option value="SUN">
+					  <option value="SWF">
+					  <option value="SYR">
+					  <option value="TLH">
+					  <option value="TPA">
+					  <option value="TRI">
+					  <option value="TUL">
+					  <option value="TUS">
+					  <option value="TVC">
+					  <option value="TWF">
+					  <option value="TXK">
+					  <option value="TYR">
+					  <option value="TYS">
+					  <option value="VPS">
+					  <option value="WYS">
+					  <option value="XNA">
+					</datalist>
+        		</p>
+        		<p>
+        			<big> 
+						Aéroport d'arrivée:
+					</big>
+					<br />
+        			<input list="airport_departure" type="text" name="dstntn">
+        			<datalist id="airport_arrival">
+					  <option value="ABE">
+					  <option value="ABQ">
+					  <option value="ACT">
+					  <option value="ACY">
+					  <option value="AEX">
+					  <option value="AGS">
+					  <option value="ALB">
+					  <option value="AMA">
+					  <option value="ANC">
+					  <option value="APN">
+					  <option value="ASE">
+					  <option value="ATL">
+					  <option value="ATW">
+					  <option value="AUS">
+					  <option value="AVL">
+					  <option value="AVP">
+					  <option value="AZO">
+					  <option value="BDL">
+					  <option value="BFL">
+					  <option value="BGM">
+					  <option value="BHM">
+					  <option value="BIS">
+					  <option value="BJI">
+					  <option value="BMI">
+					  <option value="BNA">
+					  <option value="BOI">
+					  <option value="BOS">
+					  <option value="BQK">
+					  <option value="BQN">
+					  <option value="BTR">
+					  <option value="BTV">
+					  <option value="BUF">
+					  <option value="BUR">
+					  <option value="BWI">
+					  <option value="BZN">
+					  <option value="CAE">
+					  <option value="CAK">
+					  <option value="CDC">
+					  <option value="CHA">
+					  <option value="CHO">
+					  <option value="CHS">
+					  <option value="CID">
+					  <option value="CLE">
+					  <option value="CLL">
+					  <option value="CLT">
+					  <option value="CMH">
+					  <option value="COS">
+					  <option value="CPR">
+					  <option value="CRP">
+					  <option value="CRW">
+					  <option value="CVG">
+					  <option value="DAB">
+					  <option value="DAL">
+					  <option value="DAY">
+					  <option value="DCA">
+					  <option value="DEN">
+					  <option value="DFW">
+					  <option value="DHN">
+					  <option value="DLH">
+					  <option value="DRO">
+					  <option value="DSM">
+					  <option value="DTW">
+					  <option value="EAU">
+					  <option value="ECP">
+					  <option value="EGE">
+					  <option value="EKO">
+					  <option value="ELM">
+					  <option value="ELP">
+					  <option value="ERI">
+					  <option value="EVV">
+					  <option value="EWN">
+					  <option value="EWR">
+					  <option value="EYW">
+					  <option value="FAI">
+					  <option value="FAR">
+					  <option value="FAT">
+					  <option value="FAY">
+					  <option value="FCA">
+					  <option value="FLG">
+					  <option value="FLL">
+					  <option value="FNT">
+					  <option value="FSD">
+					  <option value="FSM">
+					  <option value="FWA">
+					  <option value="GCC">
+					  <option value="GEG">
+					  <option value="GFK">
+					  <option value="GJT">
+					  <option value="GNV">
+					  <option value="GPT">
+					  <option value="GRB">
+					  <option value="GRR">
+					  <option value="GSO">
+					  <option value="GSP">
+					  <option value="GTF">
+					  <option value="GTR">
+					  <option value="GUM">
+					  <option value="HDN">
+					  <option value="HIB">
+					  <option value="HNL">
+					  <option value="HOU">
+					  <option value="HPN">
+					  <option value="HRL">
+					  <option value="HSV">
+					  <option value="HYA">
+					  <option value="IAD">
+					  <option value="IAH">
+					  <option value="ICT">
+					  <option value="IDA">
+					  <option value="ILM">
+					  <option value="IND">
+					  <option value="ISN">
+					  <option value="ISP">
+					  <option value="ITH">
+					  <option value="ITO">
+					  <option value="JAC">
+					  <option value="JAN">
+					  <option value="JAX">
+					  <option value="LBB">
+					  <option value="LBE">
+					  <option value="LCH">
+					  <option value="LEX">
+					  <option value="LFT">
+					  <option value="LGA">
+					  <option value="LGB">
+					  <option value="LIH">
+					  <option value="LIT">
+					  <option value="LNK">
+					  <option value="LRD">
+					  <option value="LSE">
+					  <option value="LWS">
+					  <option value="MAF">
+					  <option value="MBS">
+					  <option value="MCI">
+					  <option value="MCO">
+					  <option value="MDT">
+					  <option value="MDW">
+					  <option value="MEI">
+					  <option value="MEM">
+					  <option value="MFE">
+					  <option value="MFR">
+					  <option value="MGM">
+					  <option value="MHT">
+					  <option value="MIA">
+					  <option value="MKE">
+					  <option value="MKG">
+					  <option value="MLB">
+					  <option value="MLI">
+					  <option value="MLU">
+					  <option value="MOB">
+					  <option value="MQT">
+					  <option value="MRY">
+					  <option value="MSN">
+					  <option value="MSO">
+					  <option value="MSP">
+					  <option value="MSY">
+					  <option value="MYR">
+					  <option value="OAK">
+					  <option value="OGG">
+					  <option value="OKC">
+					  <option value="OMA">
+					  <option value="ONT">
+					  <option value="ORD">
+					  <option value="ORF">
+					  <option value="ORH">
+					  <option value="OTZ">
+					  <option value="PBI">
+					  <option value="PDX">
+					  <option value="PHF">
+					  <option value="PHL">
+					  <option value="PHX">
+					  <option value="PIA">
+					  <option value="PIH">
+					  <option value="PIT">
+					  <option value="PNS">
+					  <option value="PSC">
+					  <option value="PSE">
+					  <option value="PSP">
+					  <option value="PVD">
+					  <option value="PWM">
+					  <option value="RAP">
+					  <option value="RDU">
+					  <option value="RIC">
+					  <option value="RKS">
+					  <option value="RNO">
+					  <option value="ROA">
+					  <option value="ROC">
+					  <option value="RST">
+					  <option value="RSW">
+					  <option value="SAF">
+					  <option value="SAN">
+					  <option value="SAT">
+					  <option value="SAV">
+					  <option value="SBA">
+					  <option value="SBN">
+					  <option value="SBP">
+					  <option value="SDF">
+					  <option value="SEA">
+					  <option value="SFO">
+					  <option value="SGF">
+					  <option value="SGU">
+					  <option value="SHV">
+					  <option value="SJC">
+					  <option value="SJU">
+					  <option value="SLC">
+					  <option value="SMF">
+					  <option value="SNA">
+					  <option value="SPI">
+					  <option value="SRQ">
+					  <option value="STL">
+					  <option value="STT">
+					  <option value="SUN">
+					  <option value="SWF">
+					  <option value="SYR">
+					  <option value="TLH">
+					  <option value="TPA">
+					  <option value="TRI">
+					  <option value="TUL">
+					  <option value="TUS">
+					  <option value="TVC">
+					  <option value="TWF">
+					  <option value="TXK">
+					  <option value="TYR">
+					  <option value="TYS">
+					  <option value="VPS">
+					  <option value="WYS">
+					  <option value="XNA">
+					</datalist>
+        		</p>
+        		<p>
+        			<big> 
+						Date:
+					</big>
+					<br />
+        				<input type="Date" name="date" min="2016-01-01" max="2016-12-31">
+        		</p> 
+        		<!-- <p>
+					<big> 
+					<br />
+						Mois:
+					</big>
+						<br />
+        			<input type="number" name="mnth" min="1" max="12">
+        		</p>
+        		<p>
+					<big> 
+					<br />
+						Jour du mois:
+					</big>
+						<br />
+        			<input type="number" name="d_mnth" min="1" max="31">
+        		</p> -->
+        		<p>
+        			<big> 
+						Heure de départ:
+					</big>
+					<br />
+        				<input type="number" name="dp_hr" min="0" max="23">
+        		</p>
+        		<p>
+        			<big> 
+						Compagnie aérienne:
+					</big>	
+					<input list="transporteurs" type="text" name="crrr">
+					<datalist id="transporteurs">
+					  <option value="AA">
+					  <option value="AS">
+					  <option value="B6">
+					  <option value="DL">
+					  <option value="EV">
+					  <option value="F9">
+					  <option value="HA">
+					  <option value="NK">
+					  <option value="OO">
+					  <option value="UA">
+					  <option value="VX">
+					  <option value="WN">
+					</datalist>
+        		</p>
+        	</div>
+        	<input class="btn btn-primary" type="submit" value="submit">
+        </form>
+    </body>
+</html>
