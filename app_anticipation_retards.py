@@ -8,7 +8,7 @@ Created on 21 janvier 2019
 # %%
 import numpy as np
 import pandas as pd
-# import time
+import time
 import os.path as os_path
 import sys
 import pickle
@@ -62,7 +62,7 @@ def predict_delay(orgn, dstntn, mnth, d_mnth, dp_hr, crrr):
         dstntn -- aéroport d'arrivée
     """
 
-#    start_time_origin = time.time()  # Pour calculer le temps d'exécution
+    start_time_origin = time.time()  # Pour calculer le temps d'exécution
 
     # chargement des données
 #    start_time = time.time()  # Pour calculer le temps d'exécution
@@ -179,8 +179,8 @@ def predict_delay(orgn, dstntn, mnth, d_mnth, dp_hr, crrr):
 #    print(f"Retard prédit au départ de {dp_hr} heure de {orgn} à destination \
 #          de {dstntn} pour la compagnie {crrr_nm} le {jr} {d_mnth} \
 #          {mnth_nm} 2016:\n{rtrd_prdct[0]} min")
-#    print("Temps d'éxecution total--- %s seconds ---" % (
-#            time.time() - start_time_origin))
+    print("Temps d'éxecution total--- %s seconds ---" % (
+            time.time() - start_time_origin))
 
     return rtrd_prdct, jr, mnth_nm, crrr_nm
 
@@ -213,7 +213,7 @@ def send():
         return render_template(
                 'pages/predict_delay.html', nom_mois=nm_mnth, nom_jour=nm_jr,
                 heure=dp_hr, orgn=orgn, dstntn=dstntn, compagnie=crrr_nm,
-                d_mnth=d_mnth, rtrd_prdt=rtrd)
+                d_mnth=d_mnth, rtrd_prdt=round(rtrd,3))
     return render_template('pages/index.html')
 
 
