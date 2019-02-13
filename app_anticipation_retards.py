@@ -213,7 +213,7 @@ def send():
         return render_template(
                 'pages/predict_delay.html', nom_mois=nm_mnth, nom_jour=nm_jr,
                 heure=dp_hr, orgn=orgn, dstntn=dstntn, compagnie=crrr_nm,
-                d_mnth=d_mnth, rtrd_prdt=round(rtrd,3))
+                d_mnth=d_mnth, rtrd_prdt=round(rtrd,2))
     return render_template('pages/index.html')
 
 
